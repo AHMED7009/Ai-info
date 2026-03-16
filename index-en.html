@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadhramaut AI | ذكاء اصطناعي حضرموت</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loader" id="loader"><div class="loader-spinner"></div></div>
+
+    <header id="header">
+        <nav>
+            <div class="logo" onclick="showHomePage()">
+                <i class="fas fa-brain"></i>
+                <span>Hadhramaut AI</span>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="showHomePage()">Home</a></li>
+                <li><a href="#articles" onclick="showHomePage()">Articles</a></li>
+                <li><a href="#tutorials" onclick="showHomePage()">Courses</a></li>
+                <li><a href="#tools" onclick="showHomePage()">Tools</a></li>
+                <li><a href="#research" onclick="showHomePage()">Research</a></li>
+                <li><a href="#" onclick="showAboutPage()">About</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                <!-- Link back to Arabic Version -->
+                <a href="index.html" class="lang-toggle" title="النسخة العربية"><i class="fas fa-globe"></i></a>
+                <button class="btn btn-secondary">Login</button>
+                <button class="btn btn-primary">Sign Up</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>The Future of Technology at Your Fingertips</h1>
+                <p>Discover the latest articles and courses in AI and Machine Learning. Professional content keeping up with global technological evolution.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('articles').scrollIntoView({behavior: 'smooth'})">
+                        <i class="fas fa-book-open"></i> Read Articles
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('tutorials').scrollIntoView({behavior: 'smooth'})">
+                        <i class="fas fa-graduation-cap"></i> Start Course
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number" data-target="500">0</span><span class="stat-label">Tech Articles</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="50">0</span><span class="stat-label">Courses</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="10000">0</span><span class="stat-label">Active Readers</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section id="featured">
+            <div class="section-header animate-on-scroll">
+                <h2>Featured Article</h2>
+                <p>Latest and most important articles in the world of AI</p>
+            </div>
+            <article class="featured-article animate-on-scroll">
+                <div class="featured-image"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="AI Future"></div>
+                <div class="featured-content">
+                    <span class="category-tag">ChatGPT</span>
+                    <h3>How Generative AI is Changing the Future of Creative Industries?</h3>
+                    <p>Explore the profound impact of generative AI models like GPT-4 and Midjourney on design, writing, and coding fields.</p>
+                    <div class="article-meta">
+                        <div class="author-info"><img src="https://i.pravatar.cc/150?img=11" alt="Author" class="author-avatar"><span>Dr. Ahmed Al-Hadhrami</span></div>
+                        <span><i class="far fa-clock"></i> 10 min read</span>
+                    </div>
+                    <button class="btn btn-primary" style="margin-top: 1.5rem; align-self: flex-start;">Read More <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Articles Grid -->
+        <section id="articles">
+            <div class="section-header animate-on-scroll">
+                <h2>Latest Articles</h2>
+                <p>Diverse articles in various fields of Artificial Intelligence</p>
+            </div>
+            <div class="articles-grid">
+                <article class="article-card animate-on-scroll">
+                    <div class="article-card-image"><img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=600" alt="ML"></div>
+                    <div class="article-card-content">
+                        <span class="category-tag">Machine Learning</span>
+                        <h3>Your Comprehensive Guide to Learning ML from Scratch</h3>
+                        <p>Step by step, learn the basics of algorithms and predictive models with practical examples.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="article-card animate-on-scroll">
+                    <div class="article-card-image"><img src="https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?w=600" alt="CV"></div>
+                    <div class="article-card-content">
+                        <span class="category-tag">Computer Vision</span>
+                        <h3>Computer Vision: From Theory to Application</h3>
+                        <p>How image and video recognition systems work, and their real-world applications.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="article-card animate-on-scroll">
+                    <div class="article-card-image"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600" alt="NLP"></div>
+                    <div class="article-card-content">
+                        <span class="category-tag">NLP</span>
+                        <h3>Natural Language Processing: Machine Understanding</h3>
+                        <p>Explore text analysis, machine translation, and automatic summarization techniques.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories">
+            <div class="section-header animate-on-scroll">
+                <h2>Browse by Category</h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card animate-on-scroll"><div class="category-icon"><i class="fas fa-brain"></i></div><h3>Machine Learning</h3><p>Algorithms and predictive models</p></div>
+                <div class="category-card animate-on-scroll"><div class="category-icon"><i class="fas fa-network-wired"></i></div><h3>Deep Learning</h3><p>Advanced neural networks</p></div>
+                <div class="category-card animate-on-scroll"><div class="category-icon"><i class="fas fa-comments"></i></div><h3>NLP</h3><p>Understanding and analyzing text</p></div>
+                <div class="category-card animate-on-scroll"><div class="category-icon"><i class="fas fa-eye"></i></div><h3>Computer Vision</h3><p>Image and video analysis</p></div>
+            </div>
+        </section>
+
+        <!-- Trending -->
+        <section id="trending">
+            <div class="section-header animate-on-scroll">
+                <h2>Trending Topics</h2>
+            </div>
+            <div class="trending-carousel">
+                <div class="trending-item animate-on-scroll">
+                    <div class="trending-header"><h3>ChatGPT-4</h3><i class="fas fa-fire" style="color: #ef4444;"></i></div>
+                    <p>Latest release from OpenAI with advanced capabilities</p>
+                    <div class="trending-stats"><span><i class="fas fa-users"></i> 100M+</span></div>
+                </div>
+                <div class="trending-item animate-on-scroll">
+                    <div class="trending-header"><h3>Midjourney v6</h3><i class="fas fa-fire" style="color: #ef4444;"></i></div>
+                    <p>Generating ultra-high resolution and realistic images</p>
+                    <div class="trending-stats"><span><i class="fas fa-users"></i> 15M+</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorials -->
+        <section id="tutorials">
+            <div class="section-header animate-on-scroll">
+                <h2>Tutorials & Courses</h2>
+            </div>
+            <div class="tutorials-grid">
+                <div class="tutorial-card animate-on-scroll">
+                    <div class="tutorial-thumbnail"><div class="play-button"><i class="fas fa-play"></i></div><span class="difficulty beginner">Beginner</span></div>
+                    <div class="tutorial-content">
+                        <h3>Python Basics for AI</h3>
+                        <div class="tutorial-meta"><span><i class="far fa-clock"></i> 10 Hours</span></div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Start Learning</button>
+                    </div>
+                </div>
+                <div class="tutorial-card animate-on-scroll">
+                    <div class="tutorial-thumbnail" style="background: var(--gradient-3);"><div class="play-button"><i class="fas fa-play"></i></div><span class="difficulty intermediate">Intermediate</span></div>
+                    <div class="tutorial-content">
+                        <h3>Building Neural Networks with TensorFlow</h3>
+                        <div class="tutorial-meta"><span><i class="far fa-clock"></i> 15 Hours</span></div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Start Learning</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools -->
+        <section id="tools">
+            <div class="section-header animate-on-scroll">
+                <h2>Tool Reviews</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card animate-on-scroll">
+                    <div class="tool-header">
+                        <div class="tool-info"><h3>ChatGPT Plus</h3><div class="rating"><i class="fas fa-star"></i> 4.8/5</div><span class="pricing">$20/mo</span></div>
+                    </div>
+                    <p>The best smart assistant for conversations and writing</p>
+                    <div class="pros-cons">
+                        <div class="pros"><h4>Pros</h4><ul><li>High accuracy</li><li>Long context</li></ul></div>
+                        <div class="cons"><h4>Cons</h4><ul><li>Monthly subscription</li></ul></div>
+                    </div>
+                    <button class="btn btn-secondary" style="width: 100%;">View Details</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research -->
+        <section id="research">
+            <div class="section-header animate-on-scroll">
+                <h2>Research Papers</h2>
+            </div>
+            <div class="papers-list">
+                <div class="paper-item animate-on-scroll">
+                    <div class="paper-thumb"><i class="fas fa-file-alt"></i></div>
+                    <div class="paper-content">
+                        <h3>Attention Is All You Need</h3>
+                        <div class="paper-meta"><span>Vaswani et al.</span><span>2017</span></div>
+                        <p class="paper-excerpt">The revolutionary paper that introduced the Transformer model...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter">
+            <div class="newsletter animate-on-scroll">
+                <h2>Subscribe to our Newsletter</h2>
+                <p>Get the latest articles and courses directly to your email weekly</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Authors -->
+        <section id="authors">
+            <div class="section-header animate-on-scroll">
+                <h2>Our Authors</h2>
+            </div>
+            <div class="authors-grid">
+                <div class="author-card animate-on-scroll">
+                    <div class="author-avatar-large"><img src="https://i.pravatar.cc/150?img=11" alt="Author"></div>
+                    <h3>Dr. Ahmed Al-Hadhrami</h3>
+                    <p class="author-role">ML Expert</p>
+                    <div class="social-links"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div>
+                </div>
+                <div class="author-card animate-on-scroll">
+                    <div class="author-avatar-large"><img src="https://i.pravatar.cc/150?img=5" alt="Author"></div>
+                    <h3>Dr. Sarah Mohamed</h3>
+                    <p class="author-role">Computer Vision Researcher</p>
+                    <div class="social-links"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="section-header animate-on-scroll">
+                <h2>FAQ</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFaq(this)"><span>Is the content free or paid?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Most of our articles and basic courses are completely free.</p></div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFaq(this)"><span>Do I need a programming background?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>We have paths for beginners that require no prior experience.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="section-header animate-on-scroll">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form animate-on-scroll" onsubmit="event.preventDefault(); alert('Sent!');">
+                    <div class="form-group"><label>Full Name</label><input type="text" required></div>
+                    <div class="form-group"><label>Email Address</label><input type="email" required></div>
+                    <div class="form-group"><label>Message</label><textarea required></textarea></div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-card animate-on-scroll"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h3>Email</h3><p>info@hadhramaut-ai.com</p></div></div>
+                    <div class="contact-card animate-on-scroll"><div class="contact-icon"><i class="fab fa-discord"></i></div><div><h3>Discord Community</h3><p>Join our active community</p></div></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page">
+        <div class="about-hero">
+            <h1>About Hadhramaut AI</h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: var(--text-gray);">Your first Arabic platform to explore the future of technology and AI</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card animate-on-scroll"><div class="about-icon"><i class="fas fa-bullseye"></i></div><h3>Our Vision</h3><p style="color: var(--text-gray);">We strive to spread technical awareness and build an Arab generation capable of leading the AI revolution.</p></div>
+            <div class="about-card animate-on-scroll"><div class="about-icon"><i class="fas fa-users"></i></div><h3>Our Team</h3><p style="color: var(--text-gray);">An elite group of researchers, engineers, and experts in the field of AI.</p></div>
+            <div class="about-card animate-on-scroll"><div class="about-icon"><i class="fas fa-lightbulb"></i></div><h3>Our Values</h3><p style="color: var(--text-gray);">Scientific accuracy, continuous innovation, transparency, and contribution.</p></div>
+        </div>
+        <div class="roadmap-container">
+            <div class="roadmap-line"></div>
+            <h2 style="text-align: center; margin-bottom: 3rem; color: var(--accent-cyan);">Future Roadmap</h2>
+            <div class="roadmap-item animate-on-scroll"><div class="roadmap-marker"></div><div class="roadmap-content"><h4 style="color: var(--accent-purple);">Phase One: Foundation (2024)</h4><p style="color: var(--text-gray);">Platform launch, building basic content base.</p></div></div>
+            <div class="roadmap-item animate-on-scroll"><div class="roadmap-marker"></div><div class="roadmap-content"><h4 style="color: var(--accent-purple);">Phase Two: Expansion (2025)</h4><p style="color: var(--text-gray);">Launching integrated educational platform and partnerships.</p></div></div>
+        </div>
+        <button class="back-btn" onclick="showHomePage()"><i class="fas fa-arrow-left"></i> Back to Home</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>About Blog</h3><p style="color: var(--text-gray); line-height: 1.8;">Hadhramaut AI - Your first Arabic platform to learn AI and ML.</p></div>
+            <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="#" onclick="showHomePage()">Home</a></li><li><a href="#articles" onclick="showHomePage()">Articles</a></li><li><a href="#tutorials" onclick="showHomePage()">Courses</a></li></ul></div>
+            <div class="footer-section"><h3>Categories</h3><ul><li><a href="#">Machine Learning</a></li><li><a href="#">Deep Learning</a></li><li><a href="#">Computer Vision</a></li></ul></div>
+            <div class="footer-section"><h3>Follow Us</h3><div class="social-links" style="justify-content: flex-start;"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 Hadhramaut AI. All rights reserved.</p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ذكاء اصطناعي حضرموت | Hadhramaut AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loader" id="loader"><div class="loader-spinner"></div></div>
+
+    <header id="header">
+        <nav>
+            <div class="logo" onclick="showHomePage()">
+                <i class="fas fa-brain"></i>
+                <span>ذكاء اصطناعي حضرموت</span>
+            </div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="showHomePage()">الرئيسية</a></li>
+                <li><a href="#articles" onclick="showHomePage()">المقالات</a></li>
+                <li><a href="#tutorials" onclick="showHomePage()">الدورات</a></li>
+                <li><a href="#tools" onclick="showHomePage()">الأدوات</a></li>
+                <li><a href="#research" onclick="showHomePage()">البحوث</a></li>
+                <li><a href="#" onclick="showAboutPage()">عن المدونة</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="تبديل الوضع"><i class="fas fa-moon"></i></button>
+                <!-- رابط مباشر للنسخة الإنجليزية -->
+                <a href="index-en.html" class="lang-toggle" title="English Version"><i class="fas fa-globe"></i></a>
+                <button class="btn btn-secondary">تسجيل الدخول</button>
+                <button class="btn btn-primary">إنشاء حساب</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>مستقبل التكنولوجيا في متناول يديك</h1>
+                <p>اكتشف أحدث المقالات والدورات في مجال الذكاء الاصطناعي والتعلم الآلي. محتوى عربي احترافي يواكب التطور التكنولوجي العالمي.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('articles').scrollIntoView({behavior: 'smooth'})">
+                        <i class="fas fa-book-open"></i> اقرأ المقالات
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('tutorials').scrollIntoView({behavior: 'smooth'})">
+                        <i class="fas fa-graduation-cap"></i> ابدأ دورة
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item"><span class="stat-number" data-target="500">0</span><span class="stat-label">مقال تقني</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="50">0</span><span class="stat-label">دورة تدريبية</span></div>
+                    <div class="stat-item"><span class="stat-number" data-target="10000">0</span><span class="stat-label">قارئ نشط</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section id="featured">
+            <div class="section-header animate-on-scroll">
+                <h2>المقال المميز</h2>
+                <p>أحدث وأهم المقالات في عالم الذكاء الاصطناعي</p>
+            </div>
+            <article class="featured-article animate-on-scroll">
+                <div class="featured-image"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="AI Future"></div>
+                <div class="featured-content">
+                    <span class="category-tag">ChatGPT</span>
+                    <h3>كيف يغير الذكاء الاصطناعي التوليدي مستقبل الصناعات الإبداعية؟</h3>
+                    <p>استكشف التأثير العميق لنماذج الذكاء الاصطناعي التوليدي مثل GPT-4 و Midjourney على مجالات التصميم والكتابة والبرمجة.</p>
+                    <div class="article-meta">
+                        <div class="author-info"><img src="https://i.pravatar.cc/150?img=11" alt="Author" class="author-avatar"><span>د. أحمد الحضرمي</span></div>
+                        <span><i class="far fa-clock"></i> 10 دقائق قراءة</span>
+                    </div>
+                    <button class="btn btn-primary" style="margin-top: 1.5rem; align-self: flex-start;">اقرأ المزيد <i class="fas fa-arrow-left"></i></button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Articles Grid -->
+        <section id="articles">
+            <div class="section-header animate-on-scroll">
+                <h2>أحدث المقالات</h2>
+                <p>مقالات متنوعة في مختلف مجالات الذكاء الاصطناعي</p>
+            </div>
+            <div class="articles-grid">
+                <article class="article-card animate-on-scroll">
+                    <div class="article-card-image"><img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=600" alt="ML"></div>
+                    <div class="article-card-content">
+                        <span class="category-tag">Machine Learning</span>
+                        <h3>دليلك الشامل لتعلم التعلم الآلي من الصفر</h3>
+                        <p>خطوة بخطوة، تعلم أساسيات الخوارزميات والنماذج التنبؤية مع أمثلة عملية.</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+                <article class="article-card animate-on-scroll">
+                    <div class="article-card-image"><img src="https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?w=600" alt="CV"></div>
+                    <div class="article-card-content">
+                        <span class="category-tag">Computer Vision</span>
+                        <h3>الرؤية الحاسوبية: من النظرية إلى التطبيق</h3>
+                        <p>كيف تعمل أنظمة التعرف على الصور والفيديو، وتطبيقاتها في العالم الحقيقي.</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+                <article class="article-card animate-on-scroll">
+                    <div class="article-card-image"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600" alt="NLP"></div>
+                    <div class="article-card-content">
+                        <span class="category-tag">NLP</span>
+                        <h3>معالجة اللغة الطبيعية: فهم الآلة للكلام البشري</h3>
+                        <p>استكشف تقنيات تحليل النصوص والترجمة الآلية والتلخيص التلقائي.</p>
+                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories">
+            <div class="section-header animate-on-scroll">
+                <h2>تصفح حسب الفئة</h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card animate-on-scroll"><div class="category-icon"><i class="fas fa-brain"></i></div><h3>التعلم الآلي</h3><p>الخوارزميات والنماذج التنبؤية</p></div>
+                <div class="category-card animate-on-scroll"><div class="category-icon"><i class="fas fa-network-wired"></i></div><h3>التعلم العميق</h3><p>الشبكات العصبية المتقدمة</p></div>
+                <div class="category-card animate-on-scroll"><div class="category-icon"><i class="fas fa-comments"></i></div><h3>معالجة اللغة</h3><p>فهم وتحليل النصوص</p></div>
+                <div class="category-card animate-on-scroll"><div class="category-icon"><i class="fas fa-eye"></i></div><h3>الرؤية الحاسوبية</h3><p>تحليل الصور والفيديو</p></div>
+            </div>
+        </section>
+
+        <!-- Trending -->
+        <section id="trending">
+            <div class="section-header animate-on-scroll">
+                <h2>المواضيع الرائجة</h2>
+            </div>
+            <div class="trending-carousel">
+                <div class="trending-item animate-on-scroll">
+                    <div class="trending-header"><h3>ChatGPT-4</h3><i class="fas fa-fire" style="color: #ef4444;"></i></div>
+                    <p>أحدث إصدار من OpenAI مع قدرات متقدمة</p>
+                    <div class="trending-stats"><span><i class="fas fa-users"></i> 100M+</span></div>
+                </div>
+                <div class="trending-item animate-on-scroll">
+                    <div class="trending-header"><h3>Gemini-pro</h3><i class="fas fa-fire" style="color: #ef4444;"></i></div>
+                    <p>أحدث إصدار من Google مع قدرات متقدمة و اجابات صحيحه</p>
+                    <div class="trending-stats"><span><i class="fas fa-users"></i> 300M+</span></div>
+                </div>
+                <div class="trending-item animate-on-scroll">
+                    <div class="trending-header"><h3>Midjourney v6</h3><i class="fas fa-fire" style="color: #ef4444;"></i></div>
+                    <p>توليد صور فائقة الدقة والواقعية</p>
+                    <div class="trending-stats"><span><i class="fas fa-users"></i> 15M+</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tutorials -->
+        <section id="tutorials">
+            <div class="section-header animate-on-scroll">
+                <h2>الدورات والدروس</h2>
+            </div>
+            <div class="tutorials-grid">
+                <div class="tutorial-card animate-on-scroll">
+                    <div class="tutorial-thumbnail"><div class="play-button"><i class="fas fa-play"></i></div><span class="difficulty beginner">مبتدئ</span></div>
+                    <div class="tutorial-content">
+                        <h3>أساسيات Python للذكاء الاصطناعي </h3>
+                        <div class="tutorial-meta"><span><i class="far fa-clock"></i> 10 ساعات</span></div>
+                        <button class="btn btn-primary" style="width: 18%; margin-top: 1rem;"><a href="https://youtu.be/kFmDaYDVOZs?si=VHZxvAHhC1LEiVVO" target="_blank">ابدأ التعلم</a></button>
+                    </div>
+                </div>
+                <div class="tutorial-card animate-on-scroll">
+                    <div class="tutorial-thumbnail" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('Network\ Images\ –\ Browse\ 24\,897\,914\ Stock\ Photos\,\ Vectors\,\ and\ Video.jfif') center/cover;"><div class="play-button"><i class="fas fa-play"></i></div><span class="difficulty intermediate">متوسط</span></div>
+                    <div class="tutorial-content">
+                        <h3>بناء شبكات عصبية مع TensorFlow</h3>
+                        <div class="tutorial-meta"><span><i class="far fa-clock"></i> 15 ساعة</span></div>
+                        <button class="btn btn-primary" style="width: 18%; margin-top: 1rem;"><a href="https://youtu.be/LvFlxJkfF0Q?si=ZMLTRsAmj3OvE8dr" target="_blank">ابدأ التعلم</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools -->
+        <section id="tools">
+            <div class="section-header animate-on-scroll">
+                <h2>مراجعات الأدوات</h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card animate-on-scroll">
+                    <div class="tool-header">
+                        <div class="tool-info"><h3>ChatGPT Plus</h3><div class="rating"><i class="fas fa-star"></i> 4.8/5</div><span class="pricing">$20/شهر</span></div>
+                    </div>
+                    <p>أفضل مساعد ذكي للمحادثات والكتابة</p>
+                    <div class="pros-cons">
+                        <div class="pros"><h4>الإيجابيات</h4><ul><li>دقة عالية</li><li>يدعم العربية</li></ul></div>
+                        <div class="cons"><h4>السلبيات</h4><ul><li>اشتراك شهري</li></ul></div>
+                    </div>
+                </div>
+                <div class="tool-card animate-on-scroll">
+                    <div class="tool-header">
+                        <div class="tool-info"><h3>Gemini-pro</h3><div class="rating"><i class="fas fa-star"></i> 4.8/5</div><span class="pricing">$20/شهر</span></div>
+                    </div>
+                    <p>أفضل مساعد ذكي للمحادثات والكتابة</p>
+                    <div class="pros-cons">
+                        <div class="pros"><h4>الإيجابيات</h4><ul><li>دقة عالية</li><li>يدعم العربية</li><li>مجاني</li></ul></div>
+                        <div class="cons"><h4>السلبيات</h4><ul><li>عدد محدود من الرسائل</li><li>تاخر الرد قليلا</li></ul></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research -->
+        <section id="research">
+            <div class="section-header animate-on-scroll">
+                <h2>أوراق بحثية</h2>
+            </div>
+            <div class="papers-list">
+                <div class="paper-item animate-on-scroll">
+                    <div class="paper-thumb"><i class="fas fa-file-alt"></i></div>
+                    <div class="paper-content">
+                        <h3>Attention Is All You Need</h3>
+                        <div class="paper-meta"><span>Vaswani et al.</span><span>2017</span></div>
+                        <p class="paper-excerpt">الورقة البحثية الثورية التي قدمت نموذج Transformer...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter">
+            <div class="newsletter animate-on-scroll">
+                <h2>اشترك في نشرتنا البريدية</h2>
+                <p>احصل على أحدث المقالات والدورات مباشرة في بريدك الإلكتروني</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('شكراً للاشتراك!');">
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    <button type="submit">اشترك الآن</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Authors -->
+        <section id="authors">
+            <div class="section-header animate-on-scroll">
+                <h2>كُتّابنا</h2>
+            </div>
+            <div class="authors-grid">
+                <div class="author-card animate-on-scroll">
+                    <div class="author-avatar-large"><img src="https://i.pravatar.cc/150?img=11" alt="Author"></div>
+                    <h3>د. أحمد الحضرمي</h3>
+                    <p class="author-role">خبير تعلم آلي</p>
+                    <div class="social-links"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div>
+                </div>
+                <div class="author-card animate-on-scroll">
+                    <div class="author-avatar-large"><img src="https://i.pravatar.cc/150?img=5" alt="Author"></div>
+                    <h3>د. سارة محمد</h3>
+                    <p class="author-role">باحثة في الرؤية الحاسوبية</p>
+                    <div class="social-links"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq">
+            <div class="section-header animate-on-scroll">
+                <h2>الأسئلة الشائعة</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFaq(this)"><span>هل المحتوى مجاني أم مدفوع؟</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>معظم مقالاتنا ودوراتنا الأساسية مجانية تماماً.</p></div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question" onclick="toggleFaq(this)"><span>هل أحتاج لخلفية برمجية للبدء؟</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>لدينا مسارات للمبتدئين لا تتطلب أي خبرة سابقة.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="section-header animate-on-scroll">
+                <h2>تواصل معنا</h2>
+            </div>
+            <div class="contact-grid">
+                <form class="contact-form animate-on-scroll" onsubmit="event.preventDefault(); alert('تم الإرسال!');">
+                    <div class="form-group"><label>الاسم الكامل</label><input type="text" required></div>
+                    <div class="form-group"><label>البريد الإلكتروني</label><input type="email" required></div>
+                    <div class="form-group"><label>الرسالة</label><textarea required></textarea></div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">إرسال الرسالة</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-card animate-on-scroll"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h3>البريد الإلكتروني</h3><p>info@hadhramaut-ai.com</p></div></div>
+                    <div class="contact-card animate-on-scroll"><div class="contact-icon"><i class="fab fa-discord"></i></div><div><h3>مجتمع Discord</h3><p>انضم لمجتمعنا النشط</p></div></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page">
+        <div class="about-hero">
+            <h1>عن ذكاء اصطناعي حضرموت</h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: var(--text-gray);">منصتك العربية الأولى لاستكشاف مستقبل التكنولوجيا والذكاء الاصطناعي</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card animate-on-scroll"><div class="about-icon"><i class="fas fa-bullseye"></i></div><h3>رؤيتنا</h3><p style="color: var(--text-gray);">نسعى لنشر الوعي التقني وبناء جيل عربي قادر على قيادة ثورة الذكاء الاصطناعي.</p></div>
+            <div class="about-card animate-on-scroll"><div class="about-icon"><i class="fas fa-users"></i></div><h3>فريقنا</h3><p style="color: var(--text-gray);">نخبة من الباحثين والمهندسين والخبراء في مجال الذكاء الاصطناعي.</p></div>
+            <div class="about-card animate-on-scroll"><div class="about-icon"><i class="fas fa-lightbulb"></i></div><h3>قيمنا</h3><p style="color: var(--text-gray);">الدقة العلمية، الابتكار المستمر، الشفافية، والمساهمة في المجتمع المعرفي.</p></div>
+        </div>
+        <div class="roadmap-container">
+            <div class="roadmap-line"></div>
+            <h2 style="text-align: center; margin-bottom: 3rem; color: var(--accent-cyan);">الخارطة المستقبلية</h2>
+            <div class="roadmap-item animate-on-scroll"><div class="roadmap-marker"></div><div class="roadmap-content"><h4 style="color: var(--accent-purple);">المرحلة الأولى: التأسيس (2024)</h4><p style="color: var(--text-gray);">إطلاق المنصة، بناء قاعدة المحتوى الأساسي.</p></div></div>
+            <div class="roadmap-item animate-on-scroll"><div class="roadmap-marker"></div><div class="roadmap-content"><h4 style="color: var(--accent-purple);">المرحلة الثانية: التوسع (2025)</h4><p style="color: var(--text-gray);">إطلاق المنصة التعليمية المتكاملة والشراكات.</p></div></div>
+        </div>
+        <button class="back-btn" onclick="showHomePage()"><i class="fas fa-arrow-right"></i> العودة للرئيسية</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section"><h3>عن المدونة</h3><p style="color: var(--text-gray); line-height: 1.8;">ذكاء اصطناعي حضرموت - منصتك العربية الأولى لتعلم الذكاء الاصطناعي.</p></div>
+            <div class="footer-section"><h3>روابط سريعة</h3><ul><li><a href="#" onclick="showHomePage()">الرئيسية</a></li><li><a href="#articles" onclick="showHomePage()">المقالات</a></li><li><a href="#tutorials" onclick="showHomePage()">الدورات</a></li></ul></div>
+            <div class="footer-section"><h3>الفئات</h3><ul><li><a href="#">التعلم الآلي</a></li><li><a href="#">التعلم العميق</a></li><li><a href="#">الرؤية الحاسوبية</a></li></ul></div>
+            <div class="footer-section"><h3>تابعنا</h3><div class="social-links" style="justify-content: flex-start;"><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 ذكاء اصطناعي حضرموت. جميع الحقوق محفوظة.</p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
